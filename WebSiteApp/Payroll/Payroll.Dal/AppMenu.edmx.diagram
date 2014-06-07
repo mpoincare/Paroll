@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64d88d2113af4754939153bd9a62be8c" Name="Diagram1">
+        <EntityTypeShape EntityType="PayrollModel.Menu" Width="1.5" PointX="4.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.MenuRole" Width="1.5" PointX="2.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.SubMenu" Width="1.5" PointX="4.875" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.SubMenuLink" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.SubMenuRole" Width="1.5" PointX="7" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="PayrollModel.R_206" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_207" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_208" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_209" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PayrollModel.SubMenuLinkRole" Width="1.5" PointX="2.625" PointY="3.125" />
+        <AssociationConnector Association="PayrollModel.R_210" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

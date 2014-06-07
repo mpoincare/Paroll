@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PayrollModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="PayrollModelStoreContainer">
+          <EntitySet Name="Menu" EntityType="PayrollModel.Store.Menu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuRole" EntityType="PayrollModel.Store.MenuRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubMenu" EntityType="PayrollModel.Store.SubMenu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubMenuLink" EntityType="PayrollModel.Store.SubMenuLink" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubMenuLinkRole" EntityType="PayrollModel.Store.SubMenuLinkRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubMenuRole" EntityType="PayrollModel.Store.SubMenuRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="R_206" Association="PayrollModel.Store.R_206">
+            <End Role="Menu" EntitySet="Menu" />
+            <End Role="SubMenu" EntitySet="SubMenu" />
+          </AssociationSet>
+          <AssociationSet Name="R_207" Association="PayrollModel.Store.R_207">
+            <End Role="Menu" EntitySet="Menu" />
+            <End Role="MenuRole" EntitySet="MenuRole" />
+          </AssociationSet>
+          <AssociationSet Name="R_208" Association="PayrollModel.Store.R_208">
+            <End Role="SubMenu" EntitySet="SubMenu" />
+            <End Role="SubMenuRole" EntitySet="SubMenuRole" />
+          </AssociationSet>
+          <AssociationSet Name="R_209" Association="PayrollModel.Store.R_209">
+            <End Role="SubMenu" EntitySet="SubMenu" />
+            <End Role="SubMenuLink" EntitySet="SubMenuLink" />
+          </AssociationSet>
+          <AssociationSet Name="R_210" Association="PayrollModel.Store.R_210">
+            <End Role="SubMenuLink" EntitySet="SubMenuLink" />
+            <End Role="SubMenuLinkRole" EntitySet="SubMenuLinkRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Url" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MenuRole">
+          <Key>
+            <PropertyRef Name="MenuID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SubMenu">
+          <Key>
+            <PropertyRef Name="SubMenuID" />
+          </Key>
+          <Property Name="SubMenuID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Url" Type="nvarchar" MaxLength="255" />
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" Nullable="false" />
+          <Property Name="ColumnNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="SubMenuLink">
+          <Key>
+            <PropertyRef Name="SubMenuLinkID" />
+          </Key>
+          <Property Name="SubMenuLinkID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="SubMenuID" Type="int" Nullable="false" />
+          <Property Name="ColumnNumber" Type="int" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubMenuLinkRole">
+          <Key>
+            <PropertyRef Name="SubMenuLinkID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Name="SubMenuLinkID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SubMenuRole">
+          <Key>
+            <PropertyRef Name="SubMenuID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Name="SubMenuID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="R_206">
+          <End Role="Menu" Type="PayrollModel.Store.Menu" Multiplicity="1" />
+          <End Role="SubMenu" Type="PayrollModel.Store.SubMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="SubMenu">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_207">
+          <End Role="Menu" Type="PayrollModel.Store.Menu" Multiplicity="1" />
+          <End Role="MenuRole" Type="PayrollModel.Store.MenuRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="MenuRole">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_208">
+          <End Role="SubMenu" Type="PayrollModel.Store.SubMenu" Multiplicity="1" />
+          <End Role="SubMenuRole" Type="PayrollModel.Store.SubMenuRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenu">
+              <PropertyRef Name="SubMenuID" />
+            </Principal>
+            <Dependent Role="SubMenuRole">
+              <PropertyRef Name="SubMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_209">
+          <End Role="SubMenu" Type="PayrollModel.Store.SubMenu" Multiplicity="1" />
+          <End Role="SubMenuLink" Type="PayrollModel.Store.SubMenuLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenu">
+              <PropertyRef Name="SubMenuID" />
+            </Principal>
+            <Dependent Role="SubMenuLink">
+              <PropertyRef Name="SubMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_210">
+          <End Role="SubMenuLink" Type="PayrollModel.Store.SubMenuLink" Multiplicity="1" />
+          <End Role="SubMenuLinkRole" Type="PayrollModel.Store.SubMenuLinkRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenuLink">
+              <PropertyRef Name="SubMenuLinkID" />
+            </Principal>
+            <Dependent Role="SubMenuLinkRole">
+              <PropertyRef Name="SubMenuLinkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PayrollModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AppMenuEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Menus" EntityType="PayrollModel.Menu" />
+          <EntitySet Name="MenuRoles" EntityType="PayrollModel.MenuRole" />
+          <EntitySet Name="SubMenus" EntityType="PayrollModel.SubMenu" />
+          <EntitySet Name="SubMenuLinks" EntityType="PayrollModel.SubMenuLink" />
+          <EntitySet Name="SubMenuRoles" EntityType="PayrollModel.SubMenuRole" />
+          <AssociationSet Name="R_206" Association="PayrollModel.R_206">
+            <End Role="Menu" EntitySet="Menus" />
+            <End Role="SubMenu" EntitySet="SubMenus" />
+          </AssociationSet>
+          <AssociationSet Name="R_207" Association="PayrollModel.R_207">
+            <End Role="Menu" EntitySet="Menus" />
+            <End Role="MenuRole" EntitySet="MenuRoles" />
+          </AssociationSet>
+          <AssociationSet Name="R_208" Association="PayrollModel.R_208">
+            <End Role="SubMenu" EntitySet="SubMenus" />
+            <End Role="SubMenuRole" EntitySet="SubMenuRoles" />
+          </AssociationSet>
+          <AssociationSet Name="R_209" Association="PayrollModel.R_209">
+            <End Role="SubMenu" EntitySet="SubMenus" />
+            <End Role="SubMenuLink" EntitySet="SubMenuLinks" />
+          </AssociationSet>
+          <EntitySet Name="SubMenuLinkRoles" EntityType="PayrollModel.SubMenuLinkRole" />
+          <AssociationSet Name="R_210" Association="PayrollModel.R_210">
+            <End Role="SubMenuLink" EntitySet="SubMenuLinks" />
+            <End Role="SubMenuLinkRole" EntitySet="SubMenuLinkRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="OrderNumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SubMenus" Relationship="PayrollModel.R_206" FromRole="Menu" ToRole="SubMenu" />
+          <NavigationProperty Name="MenuRoles" Relationship="PayrollModel.R_207" FromRole="Menu" ToRole="MenuRole" />
+        </EntityType>
+        <EntityType Name="MenuRole">
+          <Key>
+            <PropertyRef Name="MenuID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Menu" Relationship="PayrollModel.R_207" FromRole="MenuRole" ToRole="Menu" />
+        </EntityType>
+        <EntityType Name="SubMenu">
+          <Key>
+            <PropertyRef Name="SubMenuID" />
+          </Key>
+          <Property Name="SubMenuID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="OrderNumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Menu" Relationship="PayrollModel.R_206" FromRole="SubMenu" ToRole="Menu" />
+          <NavigationProperty Name="SubMenuRoles" Relationship="PayrollModel.R_208" FromRole="SubMenu" ToRole="SubMenuRole" />
+          <NavigationProperty Name="SubMenuLinks" Relationship="PayrollModel.R_209" FromRole="SubMenu" ToRole="SubMenuLink" />
+          <Property Type="Int32" Name="ColumnNumber" />
+        </EntityType>
+        <EntityType Name="SubMenuLink">
+          <Key>
+            <PropertyRef Name="SubMenuLinkID" />
+          </Key>
+          <Property Name="SubMenuLinkID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SubMenuID" Type="Int32" Nullable="false" />
+          <Property Name="ColumnNumber" Type="Int32" Nullable="false" />
+          <Property Name="OrderNumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SubMenu" Relationship="PayrollModel.R_209" FromRole="SubMenuLink" ToRole="SubMenu" />
+          <NavigationProperty Name="SubMenuLinkRoles" Relationship="PayrollModel.R_210" FromRole="SubMenuLink" ToRole="SubMenuLinkRole" />
+        </EntityType>
+        <EntityType Name="SubMenuRole">
+          <Key>
+            <PropertyRef Name="SubMenuID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Name="SubMenuID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SubMenu" Relationship="PayrollModel.R_208" FromRole="SubMenuRole" ToRole="SubMenu" />
+        </EntityType>
+        <Association Name="R_206">
+          <End Role="Menu" Type="PayrollModel.Menu" Multiplicity="1" />
+          <End Role="SubMenu" Type="PayrollModel.SubMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="SubMenu">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_207">
+          <End Role="Menu" Type="PayrollModel.Menu" Multiplicity="1" />
+          <End Role="MenuRole" Type="PayrollModel.MenuRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="MenuRole">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_208">
+          <End Role="SubMenu" Type="PayrollModel.SubMenu" Multiplicity="1" />
+          <End Role="SubMenuRole" Type="PayrollModel.SubMenuRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenu">
+              <PropertyRef Name="SubMenuID" />
+            </Principal>
+            <Dependent Role="SubMenuRole">
+              <PropertyRef Name="SubMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_209">
+          <End Role="SubMenu" Type="PayrollModel.SubMenu" Multiplicity="1" />
+          <End Role="SubMenuLink" Type="PayrollModel.SubMenuLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenu">
+              <PropertyRef Name="SubMenuID" />
+            </Principal>
+            <Dependent Role="SubMenuLink">
+              <PropertyRef Name="SubMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SubMenuLinkRole">
+          <Key>
+            <PropertyRef Name="SubMenuLinkID" />
+            <PropertyRef Name="RoleName" />
+          </Key>
+          <Property Type="Int32" Name="SubMenuLinkID" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SubMenuLink" Relationship="PayrollModel.R_210" FromRole="SubMenuLinkRole" ToRole="SubMenuLink" />
+        </EntityType>
+        <Association Name="R_210">
+          <End Type="PayrollModel.SubMenuLink" Role="SubMenuLink" Multiplicity="1" />
+          <End Type="PayrollModel.SubMenuLinkRole" Role="SubMenuLinkRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubMenuLink">
+              <PropertyRef Name="SubMenuLinkID" />
+            </Principal>
+            <Dependent Role="SubMenuLinkRole">
+              <PropertyRef Name="SubMenuLinkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PayrollModelStoreContainer" CdmEntityContainer="AppMenuEntities">
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="PayrollModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuRoles">
+            <EntityTypeMapping TypeName="PayrollModel.MenuRole">
+              <MappingFragment StoreEntitySet="MenuRole">
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubMenus">
+            <EntityTypeMapping TypeName="PayrollModel.SubMenu">
+              <MappingFragment StoreEntitySet="SubMenu">
+                <ScalarProperty Name="ColumnNumber" ColumnName="ColumnNumber" />
+                <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubMenuLinks">
+            <EntityTypeMapping TypeName="PayrollModel.SubMenuLink">
+              <MappingFragment StoreEntitySet="SubMenuLink">
+                <ScalarProperty Name="SubMenuLinkID" ColumnName="SubMenuLinkID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+                <ScalarProperty Name="ColumnNumber" ColumnName="ColumnNumber" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubMenuRoles">
+            <EntityTypeMapping TypeName="PayrollModel.SubMenuRole">
+              <MappingFragment StoreEntitySet="SubMenuRole">
+                <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubMenuLinkRoles">
+            <EntityTypeMapping TypeName="PayrollModel.SubMenuLinkRole">
+              <MappingFragment StoreEntitySet="SubMenuLinkRole">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="SubMenuLinkID" ColumnName="SubMenuLinkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

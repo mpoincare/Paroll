@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F89BF17D-3FAD-41A6-9F65-90217C54139E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Payroll.Dal</RootNamespace>
+    <AssemblyName>Payroll.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Annee.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppMenu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMenu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMenu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AppMenuManager.cs" />
+    <Compile Include="Avance.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Banque.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bonus.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BonusPrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cessation.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationPrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Compagnie.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieContact.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieJourChome.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieMonnaie.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagniePrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieRepository.cs" />
+    <Compile Include="CompagnieTypeConge.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieTypeEmploye.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieTypePaiement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompagnieTypeSalaire.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conge.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CongeDetail.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employe.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployePhoto.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployePrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeRepository.cs" />
+    <Compile Include="EmployeSalaire.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EqualityComparers.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="HeureSup.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Holding.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JourChomeReference.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationLogiciel.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LookupRepository.cs" />
+    <Compile Include="Menu.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuRole.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Monnaie.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mouvement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MouvementSalaire.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NaturePrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paye.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayeAjustement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayePrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payroll.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payroll.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Periode.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodeRepository.cs" />
+    <Compile Include="Poste.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrelevementApplication.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrelevementDetail.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presence.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pret.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PretPeriode.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PretRemboursement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatutAnnee.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatutEmploye.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatutMatrimonial.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatutPeriode.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubMenu.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubMenuLink.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubMenuLinkRole.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubMenuRole.cs">
+      <DependentUpon>AppMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TauxMonnaiePeriode.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeAjustement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeCessation.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeConge.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeEmploye.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeMouvement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePaiement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePeriode.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePrelevement.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePret.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeSalaire.cs">
+      <DependentUpon>Payroll.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AppMenu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppMenu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="AppMenu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppMenu.edmx</DependentUpon>
+      <LastGenOutput>AppMenu.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AppMenu.edmx.diagram">
+      <DependentUpon>AppMenu.edmx</DependentUpon>
+    </None>
+    <None Include="AppMenu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppMenu.edmx</DependentUpon>
+      <LastGenOutput>AppMenu.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="Payroll.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Payroll.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Payroll.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Payroll.edmx</DependentUpon>
+      <LastGenOutput>Payroll.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Payroll.edmx.diagram">
+      <DependentUpon>Payroll.edmx</DependentUpon>
+    </None>
+    <None Include="Payroll.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Payroll.edmx</DependentUpon>
+      <LastGenOutput>Payroll.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payroll.Dal.Core\Payroll.Dal.Core.csproj">
+      <Project>{78686d9f-c9a9-4bae-9bca-670ffb408d86}</Project>
+      <Name>Payroll.Dal.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

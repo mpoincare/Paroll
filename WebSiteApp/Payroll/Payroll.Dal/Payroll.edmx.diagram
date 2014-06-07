@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4b6bfc31232d4f5dbb79fe27312c4531" Name="Diagram1">
+        <EntityTypeShape EntityType="PayrollModel.Annee" Width="1.5" PointX="5.25" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Avance" Width="1.5" PointX="18" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Banque" Width="1.5" PointX="0.75" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Bonus" Width="1.5" PointX="10.5" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.BonusPrelevement" Width="1.5" PointX="12.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Cessation" Width="1.5" PointX="15.75" PointY="60.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CessationPrelevement" Width="1.5" PointX="18" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Compagnie" Width="1.5" PointX="3" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieContact" Width="1.5" PointX="5.25" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieJourChome" Width="1.5" PointX="5.25" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieMonnaie" Width="1.5" PointX="8.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagniePrelevement" Width="1.5" PointX="7.5" PointY="61.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieTypeConge" Width="1.5" PointX="8.25" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieTypeEmploye" Width="1.5" PointX="8.25" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieTypePaiement" Width="1.5" PointX="5.25" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CompagnieTypeSalaire" Width="1.5" PointX="10.5" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Conge" Width="1.5" PointX="18.75" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.CongeDetail" Width="1.5" PointX="21" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Departement" Width="1.5" PointX="5.25" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Employe" Width="1.5" PointX="10.5" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.EmployePhoto" Width="1.5" PointX="12.75" PointY="70.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.EmployePrelevement" Width="1.5" PointX="15.75" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.EmployeSalaire" Width="1.5" PointX="15.75" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.HeureSup" Width="1.5" PointX="12.75" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Holding" Width="1.5" PointX="0.75" PointY="54.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.JourChomeReference" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.LocationLogiciel" Width="1.5" PointX="5.25" PointY="69.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Monnaie" Width="1.5" PointX="0.75" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Mouvement" Width="1.5" PointX="18.75" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.MouvementSalaire" Width="1.5" PointX="21" PointY="58.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.NaturePrelevement" Width="1.5" PointX="8.25" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Paye" Width="1.5" PointX="12.75" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PayeAjustement" Width="1.5" PointX="9.75" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PayePrelevement" Width="1.5" PointX="18" PointY="71.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Periode" Width="1.5" PointX="7.5" PointY="65.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Poste" Width="1.5" PointX="5.25" PointY="72.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Prelevement" Width="1.5" PointX="10.5" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PrelevementApplication" Width="1.5" PointX="8.25" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PrelevementDetail" Width="1.5" PointX="12.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Presence" Width="1.5" PointX="12.75" PointY="89.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.Pret" Width="1.5" PointX="21" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PretPeriode" Width="1.5" PointX="23.25" PointY="71.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.PretRemboursement" Width="1.5" PointX="15.75" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.StatutAnnee" Width="1.5" PointX="3" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.StatutEmploye" Width="1.5" PointX="8.25" PointY="58.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.StatutMatrimonial" Width="1.5" PointX="8.25" PointY="56.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.StatutPeriode" Width="1.5" PointX="5.25" PointY="63" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TauxMonnaiePeriode" Width="1.5" PointX="12.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeAjustement" Width="1.5" PointX="7.5" PointY="71" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeCessation" Width="1.5" PointX="13.5" PointY="73.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeConge" Width="1.5" PointX="6" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeEmploye" Width="1.5" PointX="6" PointY="59.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeMouvement" Width="1.5" PointX="16.5" PointY="75.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypePaiement" Width="1.5" PointX="13.5" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypePeriode" Width="1.5" PointX="5.25" PointY="75.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypePrelevement" Width="1.5" PointX="8.25" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypePret" Width="1.5" PointX="5.25" PointY="79" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollModel.TypeSalaire" Width="1.5" PointX="13.5" PointY="55.375" IsExpanded="true" />
+        <AssociationConnector Association="PayrollModel.FK__Annee__Compagnie__2FEF161B" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Annee__StatutAnn__30E33A54" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Periode__AnneeID__76818E95" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_165" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_220" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_212" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_224" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_172" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_225" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK_BonusPrelevement_02" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Cessation__Emplo__369C13AA" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Cessation__TypeC__379037E3" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_163" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_79" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK_CessationPrelevement_02" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__Compa__4119A21D" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__Compa__48BAC3E5" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__Compa__4D7F7902" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__Holdi__3B60C8C7" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Departeme__Compa__5614BF03" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Poste__Compagnie__795DFB40" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_177" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_181" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_183" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_199" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_223" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_228" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__Monna__420DC656" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_178" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_179" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_227" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_200" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__TypeE__49AEE81E" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Employe__0A888742" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_233" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Compagnie__TypeP__4E739D3B" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_235" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_234" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_196" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_197" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_198" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Employe__Departe__57FD0775" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Mouvement__Depar__6B0FDBE9" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_185" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Employe__PosteID__59E54FE7" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Employe__StatutE__5AD97420" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Employe__StatutM__5BCD9859" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__EmployePr__Emplo__5EAA0504" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__HeureSup__Employ__673F4B05" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Mouvement__Emplo__69279377" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Presence__Employ__7E22B05D" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_195" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_213" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__EmployePr__Prele__5F9E293D" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__EmployePr__TypeP__60924D76" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_226" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_211" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_214" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_215" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_219" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_221" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_222" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__TauxMonna__Monna__06B7F65E" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_217" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Mouvement__Poste__6C040022" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Mouvement__TypeM__6A1BB7B0" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_216" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_218" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Preleveme__Natur__7B4643B2" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Paye__PeriodeID__6FD49106" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_164" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_202" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_203" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK_PayePrelevement_02" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Periode__StatutP__7775B2CE" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Periode__TypePer__7869D707" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__PretRembo__Perio__04CFADEC" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__TauxMonna__Perio__05C3D225" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Preleveme__Prele__7D2E8C24" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Preleveme__TypeP__7A521F79" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.R_180" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__Pret__TypePretID__7F16D496" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__PretPerio__PretI__01F34141" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__PretRembo__PretI__03DB89B3" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.FK__PretPerio__TypeP__02E7657A" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.CompagnieBanque" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.CompagnieTypePeriode" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollModel.CompagnieTypePret" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
