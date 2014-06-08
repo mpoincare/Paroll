@@ -1,0 +1,73 @@
+﻿body {
+     font-family:Trebuchet MS;
+     background-color:#f2f2f2;
+	background-image: url(../images/bodybg.png);
+}
+
+.horizontal-stripe {
+    width:650px;
+    background-image:url(../Images/horiz-stripe.png);
+    background-repeat:repeat-x; /*repeat horizontally*/
+    height:23px;
+    float:left;
+}
+#login-rectangle{
+
+    width:650px;
+    height:390px;
+    float:left;
+     background-color:#ffffff; 
+}
+.login-bg{
+
+     background-image:url('../Images/login_bg.png');
+    background-repeat:no-repeat; 
+    margin-top: 12px;
+    /*margin-left:20px;*/
+    height:350px;
+    width:282px;
+}
+#login-label
+{
+    border-bottom:solid 1px #dadada;
+    font-size:20px;
+    color:GrayText;
+    width:220px;
+}
+#control-frame{
+
+    font-size:15px;
+    color:GrayText;
+    width:235px;
+    height:230px;
+    margin-top:30px;
+    margin-left:23px;
+}
+.bottom-stripe{
+    height:45px;
+    width:650px;
+    background-image:url(../Images/bottom_bg.png);
+    background-repeat:repeat-x;/*repeat horizontally*/
+    float:left;
+}
+.text-bg
+{
+	background-image: url('../Images/carou_shadow.jpg'); background-repeat: repeat-x;
+	border:solid 1px #e5e5e5;
+}
+
+.text-multiline-bg
+{
+	background-image: url('../Images/carou_shadow.jpg'); background-repeat: repeat-x;
+	border:solid 1px #e5e5e5;
+}
+
+.button-bg
+{
+	background-image: url('../Images/background_btn.gif'); background-repeat: repeat-x;
+	color:GrayText;
+	border:none; 
+    height:28px;
+}
+.button-white{height:23px; width:100px;  border:solid 1px gray; padding-left:2px;padding-right:2px; text-align:center;}
+

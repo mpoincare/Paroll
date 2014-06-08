@@ -123,6 +123,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Login_z.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\ManageUsers.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -191,8 +192,15 @@
     <Content Include="EmpSearch.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\background_btn.gif" />
+    <Content Include="Images\bodybg.png" />
+    <Content Include="Images\bottom_bg.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\button-bg.jpg" />
+    <Content Include="Images\carou_shadow.jpg" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\horiz-stripe.png" />
+    <Content Include="Images\login_bg.png" />
     <Content Include="Images\menu_bg.gif" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -238,6 +246,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\Login.css" />
     <Content Include="UserControls\CalendarCombo.ascx" />
     <Content Include="UserControls\CongeUserControl.ascx" />
     <Content Include="UserControls\MessageUserControl.ascx" />
@@ -248,6 +257,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\ManageUsers.aspx.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,12 +280,12 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Account\Login_z.aspx.cs">
+      <DependentUpon>Login_z.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Account\Login_z.aspx.designer.cs">
+      <DependentUpon>Login_z.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
